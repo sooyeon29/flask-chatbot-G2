@@ -1,0 +1,263 @@
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: url('love-stress-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chat-container {
+  width: 80%; /* 고정된 너비 */
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+
+.chat-container button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.chat-container button:hover {
+  background-color: #45a049;
+}
+
+
+.user-info-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.user-info-form input, .user-info-form select, .user-info-form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.text-input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  resize: none; /* 크기 조절 금지 */
+  overflow-y: auto; /* 세로 스크롤 추가 */
+  max-height: 90px; /* 최대 높이: 3줄 */
+  line-height: 1.5;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  height: auto;
+  min-height: 40px; /* 최소 높이 설정 */
+}
+
+.user-info-form button {
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.user-info-form button:hover {
+  background: linear-gradient(to right, #ff4e91, #ff5a75);
+}
+/* 완료하기 버튼 스타일 */
+.finish-button {
+  padding: 12px 20px;
+  background: linear-gradient(to right, #4c91f2, #5aa9ff); /* 파란색 그라데이션 */
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%; /* 전송 버튼과 동일한 너비 */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.finish-button:hover {
+  background: linear-gradient(to right, #3b78db, #4c91f2); /* 더 어두운 파란색 */
+}
+
+/* 헤더 영역 스타일 */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    background-color: #ffe0e5;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* 채팅창과 간격 */
+}
+
+.user-count-small {
+  font-size: 15px;
+  color: #666;
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* 사랑세포와 간격 */
+}
+
+.user-icon-small {
+  width: 14px;
+  height: 14px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+
+/* 프로필 이미지 스타일 */
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* 프로필 이름 스타일 */
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.chat-output {
+  height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bot-message-container, .user-message-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px; /* 프로필과 메시지 간격 */
+}
+
+.bot-message-container .profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff758c;
+}
+
+.user-message-container {
+  justify-content: flex-end;
+}
+
+.bot-message, .user-message {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  word-wrap: break-word;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+  background: #4c91f2;
+  color: #ffffff;
+  align-self: flex-end;
+}
+
+.bot-message {
+  background: #ffe0e5;
+  color: #333333;
+}
+
+.text-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.text-input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  resize: none;
+  overflow-y: auto;
+  max-height: 90px; /* 최대 높이: 3줄 */
+  line-height: 1.5;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  margin-top: 10px;
+  margin-bottom: 10px; /* 입력창 아래 마진 추가 */
+  height: auto;
+  min-height: 40px; /* 최소 높이 설정 */
+}
+
+.text-input::placeholder {
+  color: #aaa;
+}
+
+.chat-submit {
+  padding: 12px 20px;
+  background: linear-gradient(to right, #ff7eb3, #ff758c);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chat-submit:hover {
+  background: linear-gradient(to right, #ff4e91, #ff5a75);
+}
+
+.text-input:focus {
+  border-color: #ff7eb3;
+  box-shadow: 0 0 5px rgba(255, 126, 179, 0.5);
+}
