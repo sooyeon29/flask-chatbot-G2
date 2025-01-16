@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_from_directory, session
+from flask_cors import CORS  # CORS 추가
 import openai
 import sqlite3
 import os
@@ -7,8 +8,11 @@ import pytz
 
 # Flask 앱 설정
 app = Flask(__name__, static_folder=".", static_url_path="")
+# CORS 설정 추가
+CORS(app)  # Flask 앱에 CORS 활성화
 app.secret_key = os.urandom(24)
 KST = pytz.timezone('Asia/Seoul')
+
 
 # OpenAI API 키 설정
 openai.api_key = os.getenv("OPENAI_API_KEY")
